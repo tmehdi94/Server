@@ -1,0 +1,68 @@
+/* prevent browser discrepancies and set background color */
+html, body {
+	margin:0;
+	padding:0;
+	background:#CCCCCC;
+}
+/* limit page width and center content */
+body {
+	width:60%;
+	margin:0 auto;
+}
+/* adapted from http://snipplr.com/view/52286/different-css-dropshadows/ for nice shadow effect */
+header,section {
+	width:80%;
+	padding: 15px;
+	position:relative;
+	float:left;
+	margin: 25px 0;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-border-radius:4px; 
+    border-radius:4px;
+}
+header:before, header:after, section:before, section:after {
+	content:"";
+	position:absolute; 
+	z-index:-2;
+	bottom:15px;
+    left:10px;
+    width:50%;
+    height:20%;
+    max-width:300px;
+    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);   
+       -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(-3deg);    
+       -moz-transform:rotate(-3deg);   
+        -ms-transform:rotate(-3deg);   
+         -o-transform:rotate(-3deg);
+            transform:rotate(-3deg);
+}
+header:after, section:after {
+	right:10px; 
+	left:auto;
+	-webkit-transform:rotate(3deg);   
+	-moz-transform:rotate(3deg);  
+		-ms-transform:rotate(3deg);  
+		-o-transform:rotate(3deg);
+			transform:rotate(3deg);
+}
+
+/* other small tweaks */
+header {
+	background: #CD5C5C;
+	color: #F5F5F5;
+	letter-spacing: 5px;
+	text-align: center;
+}
+#recenttweet{
+	background:#FFFE59;
+}
+#recenthash {
+	background:#F3EFE0;
+}
+li:first-child {
+	font-style:italic;
+}
